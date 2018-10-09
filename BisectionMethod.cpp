@@ -1,16 +1,19 @@
 #include <iostream> //printing
 #include <limits>   //NaN
 
+//function to be solved
 double f(double x){
   return x*x-10005;
 }
 
+//sign of number
 int sign(double x){
   if (x > 0) return 1;
   if (x < 0) return -1;
   return 0;
 }
 
+//absolute value
 double abs(double x){
   return (x<0)? -x : x;
 }
@@ -29,7 +32,7 @@ double finder(double low, double high){
 
     ( sign(f(low)) != sign(f(mid)) ) ? high=mid: low=mid;
 
-    if(counter>1000)break;
+    if(counter>10000)break;
     counter++;
   }
   return std::numeric_limits<double>::quiet_NaN();
