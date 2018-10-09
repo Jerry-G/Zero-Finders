@@ -1,6 +1,14 @@
 CXX=g++
-src = $(wildcard *.cpp)
-obj = $(src:.c=.o)
+CFLAGS=-O3
+OBJ=Bisection Newton
 
-%.o: %.c
-	$(CXX) -o $@ $^
+all: $(OBJ)
+
+Newton: NewtonMethod.cpp
+	$(CXX) $(CFLAGS) -o $@ $^
+
+Bisection: BisectionMethod.cpp
+	$(CXX) $(CFLAGS) -o $@ $^
+
+clean:
+	rm -f $(OBJ)
