@@ -1,13 +1,14 @@
 CXX=g++
 CFLAGS=-O3
-OBJ=Bisection Newton
+SCR=NewtonMethod.cpp BisectionMethod.cpp
+OBJ=Newton Bisection
 
 all: $(OBJ)
 
 Newton: NewtonMethod.cpp
-	$(CXX) $(CFLAGS) -o $@ $^
-
 Bisection: BisectionMethod.cpp
+
+$(OBJ):
 	$(CXX) $(CFLAGS) -o $@ $^
 
 clean:
