@@ -1,5 +1,5 @@
 CXX=g++
-CFLAGS=-O3
+CFLAGS=
 SCR=NewtonMethod.cpp BisectionMethod.cpp
 OBJ=Newton Bisection
 
